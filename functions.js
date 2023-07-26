@@ -9,7 +9,7 @@ const register = async (req, res) => {
   try {
     const registerCheck = await registerData.find({ name: req.body.name });
     if (registerCheck.length > 0) {
-      return res.status(500).json({ message: "email already exist" });
+      res.status(500).json({ message: "email already exist" });
     }
     const newUser = await registerData.create(req.body);
     res.status(201).json(newUser);
