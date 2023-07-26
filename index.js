@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(bodyParser.json({ limit: "200mb" }));
 app.use(cors());
 
-const Details = require("./Models/amazon");
+const Details = require("./Models/Amazon");
 
 const { login, register } = require("./funtions");
 // const register = require("./funtions");
