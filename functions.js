@@ -3,7 +3,7 @@ const login = async (req, res) => {
   res.status(201).json({ message: "OK" });
 };
 
-const registerData = require("./Models/Register");
+const registerData = require("./Model/Register");
 
 const register = async (req, res) => {
   try {

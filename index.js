@@ -19,14 +19,16 @@ app.use(express.json());
 app.use(bodyParser.json({ limit: "200mb" }));
 app.use(cors());
 
-const Details = require("./Models/Amazon");
+const Details = require("./Model/Amazon");
 
-const { login, register } = require("./funtions");
+const { login, register } = require("./functions");
 // const register = require("./funtions");
+
+const registerData = require("./Model/Register");
 
 app.get("/products", async (req, res) => {
   try {
-    const testT = await Details.find({});
+    const testT = await registerData.find();
     res.status(200).json(testT);
   } catch (error) {
     res.status(500).json({ message: error.message });
