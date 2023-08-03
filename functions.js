@@ -1,4 +1,5 @@
 const registerData = require("./Model/Register");
+const Built_Data = require("./Model/Build");
 
 const login = async (req, res) => {
   try {
@@ -26,4 +27,27 @@ const register = async (req, res) => {
   }
 };
 
-module.exports = { login, register };
+const buildData = async (req, res) => {
+  console.log(req.body);
+
+  try {
+    const builtData = await Built_Data.create(req.body);
+
+    res.status(201).json(builtData);
+  } catch (e) {
+    res.status(500).json({ message: e.message });
+  }
+};
+
+const getData = async (req, res) => {
+  try {
+    const page = req.query.page;
+    const skip = (page - 1) * 10;
+    const builtData = await Built_Data.find({});
+    res.status(201).json(builtData);
+  } catch (e) {
+    res.status(500).json({ message: e.message });
+  }
+};
+
+module.exports = { login, register, buildData, getData };

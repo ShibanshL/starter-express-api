@@ -21,7 +21,7 @@ app.use(cors());
 
 const Details = require("./Model/Amazon");
 
-const { login, register } = require("./functions");
+const { login, register, buildData, getData } = require("./functions");
 // const register = require("./funtions");
 
 const registerData = require("./Model/Register");
@@ -38,6 +38,10 @@ app.get("/products", async (req, res) => {
 app.post("/login", login);
 
 app.post("/register", register);
+
+app.post("/build/:id", buildData);
+
+app.get("/data", getData);
 
 mongoose.set("strictQuery", false);
 mongoose
