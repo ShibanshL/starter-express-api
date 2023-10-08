@@ -21,7 +21,18 @@ app.use(cors());
 
 const Details = require("./Model/Amazon");
 
-const { login, register, buildData, getData } = require("./functions");
+const {
+  login,
+  register,
+  buildData,
+  addResponses,
+  getData,
+  formSubData,
+  getUserFormData,
+  postIndividualResperDay,
+  updateIndividualResperDay,
+  getIndividualResperDay,
+} = require("./functions");
 // const register = require("./funtions");
 
 const registerData = require("./Model/Register");
@@ -41,7 +52,19 @@ app.post("/register", register);
 
 app.post("/build/:id", buildData);
 
-app.get("/data", getData);
+app.patch("/getbuild/:id", addResponses);
+
+app.get("/data/:id", getData);
+
+app.post("/formSub/:id", formSubData);
+
+app.get("/formSub/:id/:f_Id", getUserFormData);
+
+app.post("/indRes/:id", postIndividualResperDay);
+
+app.patch("/indRes/:id", updateIndividualResperDay);
+
+app.get("/indRes/:id", getIndividualResperDay);
 
 mongoose.set("strictQuery", false);
 mongoose

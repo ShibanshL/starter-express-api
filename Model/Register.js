@@ -3,6 +3,7 @@ const registerDataSchema = new mongoose.Schema(
   {
     name: String,
     password: String,
+    email: String,
   },
   { versionKey: false }
 );
