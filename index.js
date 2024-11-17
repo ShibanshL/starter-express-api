@@ -83,8 +83,8 @@ mongoose
   });
 
 
-// Export as a Vercel serverless function
-export default (req, res) => {
-  app(req, res);
-};
+// // Export as a Vercel serverless function
+// export default (req, res) => {
+//   app(req, res);
+// };
 
