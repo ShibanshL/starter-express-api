@@ -81,3 +81,10 @@ mongoose
   .catch((error) => {
     console.log(error);
   });
+
+
+// Export as a Vercel serverless function
+export default (req, res) => {
+  app(req, res);
+};
+
