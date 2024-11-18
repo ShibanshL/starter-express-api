@@ -68,7 +68,7 @@ app.get("/indRes/:id", getIndividualResperDay);
 
 app.get("/testing", async (req, res) => {
   try {
-    res.status(201).json({name:"It's working for now"});
+    res.status(201).json({name:"It's working for now it seems."});
   } catch (e) {
     res.status(500).json({ message: e.message });
   }
