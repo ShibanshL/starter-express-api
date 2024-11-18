@@ -66,6 +66,15 @@ app.patch("/indRes/:id", updateIndividualResperDay);
 
 app.get("/indRes/:id", getIndividualResperDay);
 
+app.get("/testing", async (req, res) => {
+  try {
+    res.status(201).json({name:"It's working for now"});
+  } catch (e) {
+    res.status(500).json({ message: e.message });
+  }
+});
+
+
 mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.MONGO_URI, {
