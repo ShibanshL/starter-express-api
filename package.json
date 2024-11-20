@@ -14,9 +14,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cyclic-software/starter-express-api/issues"
+    "url": "https://github.com/ShibanshL/express_API/issues"
   },
-  "homepage": "https://github.com/cyclic-software/starter-express-api#readme",
+  "homepage": "https://github.com/ShibanshL/express_API#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
