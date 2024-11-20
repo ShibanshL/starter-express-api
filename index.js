@@ -17,7 +17,15 @@ const headers = {
 
 app.use(express.json());
 app.use(bodyParser.json({ limit: "200mb" }));
-app.use(cors());
+
+const corsConfig = {
+  origin : "*",
+  credential:true,
+  methods:["GET","PUT","POST","DELETE","PATCH"]
+}
+
+app.use(cors(corsConfig));
+
 
 const Details = require("./Model/Amazon");
 
