@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ShibanshL/express_API.git"
+    "url": "https://github.com/ShibanshL/API_Express.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ShibanshL/express_API/issues"
+    "url": "https://github.com/ShibanshL/API_Express/issues"
   },
-  "homepage": "https://github.com/ShibanshL/express_API#readme",
+  "homepage": "https://github.com/ShibanshL/API_Express#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
